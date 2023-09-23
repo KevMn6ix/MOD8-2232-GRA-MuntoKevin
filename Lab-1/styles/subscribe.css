@@ -1,19 +1,16 @@
 body{
-    background-image: url("../assets/THStadium.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/THLogo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     font-family: 'Popins', sans-serif;
-    background-blend-mode: darken;
 }
-
-
 
 .header{
     background-color: #00164d;
     height: 90px;
-    
+    padding-top: 2rem;
 }
 
 .header .sale-message{
@@ -47,21 +44,18 @@ body{
     text-decoration: none;
     color: #f6fe08;
     margin-right: 50px;
-    
 }
 
 .footer{
     width: 100%;
-    padding: 6rem 0;
+    padding: 1rem 0;
     background-color: #00164d;
 }
-
 
 .footer-container{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    
+    gap: 2.5rem; 
 }
 
 .footer-container .top{
@@ -69,7 +63,7 @@ body{
     display: flex;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
+    grid-gap: 25px;
     
 }
 
@@ -115,5 +109,66 @@ main{
 }
 
 main h1{
+    text-align: center;
+}
+
+.subscribe .container h2, .subscribe .container p{
+    padding: 0rem 20rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin: auto;
+    max-width: 400px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    border: none;
+}
+
+form input{
+    margin-bottom: 1rem;
+    padding: 10px 18px;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+button{
+    width: 100px;
+    height: 35px;;
+    margin: auto;
+    background-color: #00164d;
+    color: #ffffff;
+}
+
+form select{
+    margin-bottom: 1rem;
+    padding: 10px 18px;
+    font-size: 1.2rem;
+}
+
+table {
+    padding-top: 5rem;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table th{
+    border: 2px solid #00164d;
+    width: 150px;
+    height: 50px;
+}
+
+td{
+    border: 2px solid #00164d;
+    width: 150px;
+    height: 50px;
     text-align: center;
 }
