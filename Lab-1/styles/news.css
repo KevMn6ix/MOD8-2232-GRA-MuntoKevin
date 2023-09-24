@@ -1,3 +1,12 @@
+:root{
+    --primary-color: #00164d;
+    --secondary-color: #f6fe08;
+    --third-color: #ffffff;
+}.dark-theme{
+    --primary-color: #ffffff;
+    --secondary-color: #00164d;
+}
+
 body{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/THSquad2019.jpg');
     background-size: cover;
@@ -10,7 +19,7 @@ body{
 }
 
 .header{
-    background-color: #00164d;
+    background-color: var(--primary-color);
     height: 90px;
     padding-top: 2rem;
 }
@@ -20,7 +29,7 @@ body{
 }
 
 .header .sale-message a{
-    color: #f6fe08;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -28,6 +37,11 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 10px;
+}
+
+#icon{
+    color: var(--secondary-color);
+    font-size: 25px;
 }
 
 .navBar ul{
@@ -38,20 +52,24 @@ body{
 }
 
 .navBar li a{
-    color: #f6fe08;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
 .navBar a {
     text-decoration: none;
-    color: #f6fe08;
+    color: var(--secondary-color);
     margin-right: 50px;
+}
+
+.navBar a h1{
+    margin-left: 2.5rem;
 }
 
 .footer{
     width: 100%;
     padding: 1rem 0;
-    background-color: #00164d;
+    background-color: var(--primary-color);
 }
 
 .footer-container{
@@ -69,7 +87,7 @@ body{
 }
 
 .footer-container .top a{
-    color: #ffffff;
+    color: var(--third-color);
     text-decoration-line: none;
 }
 
@@ -82,7 +100,7 @@ body{
 }
 
 main{
-    color: #ffffff;
+    color: var(--third-color);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -102,6 +120,40 @@ article{
     font-size: 2rem;
 }
 
-.botton p{
-    font-size: large;
+.bottom p{
+    color: var(--secondary-color);
+}
+
+#socialIcon{
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1000px) {
+    main h1{
+        margin: 2rem 2rem 0 2rem;
+        font-size: 20px;
+    }
+
+    main .article{
+        margin: 0 0.1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main h1{
+        margin: 2rem 2rem 0 2rem;
+        font-size: 20px;
+    }
+
+    main .article{
+        margin: 0 0.1rem;
+        font-size: 15px;
+    }
+
+    .navBar ul {
+        display: flex;
+        justify-content: left;
+        gap: 1.5rem;
+        list-style-type: none;
+    } 
 }
