@@ -61,8 +61,3 @@ subForm.addEventListener('submit', function(event) {
 
 });
 
-var icon = document.getElementById('icon');
-
-icon.onclick = function(){
-    document.body.classList.toggle("dark-theme")
-}

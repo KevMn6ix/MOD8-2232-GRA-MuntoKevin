@@ -8,6 +8,13 @@
     --secondary-color: #00164d;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #00164d;
+    }
+}
+
 body{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/THStadium.jpg');
     background-size: cover;
