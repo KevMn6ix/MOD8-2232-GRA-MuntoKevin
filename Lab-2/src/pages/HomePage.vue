@@ -29,9 +29,6 @@ export default {
 <template>
   <div class="container">
     <input v-model="text" placeholder="Search for a book" class="search-bar"/>
-    <!--<p>{{ this.text }}</p>-->
-    <button @click="submit" >Search</button>
-    
   </div>
 
   <div v-for="book in books" :key="book.id">
@@ -47,6 +44,12 @@ export default {
 </template>
 
 <style>
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container{
   text-align: center;
   justify-content: space-between;
@@ -61,7 +64,7 @@ export default {
 .btn{
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 </style>

@@ -2,8 +2,8 @@
 let id = 0;
 export default{
     name: "BookForm",
-    data(){
-        return{
+    data () {
+        return {
             bookData: {
                 id: id++,
                 bookName: '',
@@ -13,7 +13,7 @@ export default{
         }
     },
     props: {
-        addBook: Function,
+        saveBook: Function,
         buttonText : String
     }
 }
@@ -25,22 +25,22 @@ export default{
     <div class="form">
         <form>
             <label id="bookName">Book Name</label>
-            <input type='text' v-model="bookData.bookName"/>
+            <input type='text' v-model="bookData.bookName" placeholder="Book Name" />
 
             <label id="bookAuthor">Author name</label>
-            <input type='text' v-model="bookData.bookAuthor"/>
+            <input type='text' v-model="bookData.bookAuthor" placeholder="Author Name" />
 
             <label id="pageCount" >Page Count</label>
-            <input type="number" v-model="bookData.pageCount"/>
+            <input type="number" v-model="bookData.pageCount" placeholder="Number Of Pages" />
 
-            <button className='btn' @click="addBook(bookData)"  type="button">{{ buttonText }}</button>
+            <button className='btn' @click="saveBook(bookData)"  type="button">{{ buttonText }}</button>
         </form>
     </div>
 </template>
 
 <style>
 label{
-    color: black  ;
+    
     margin-bottom: 0.5rem;
 }
 

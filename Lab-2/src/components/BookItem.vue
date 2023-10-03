@@ -7,7 +7,7 @@ export default{
             bookAuthor : String,
             pageCount : Number
     },
-    data() {
+    data () {
     },
 }
 

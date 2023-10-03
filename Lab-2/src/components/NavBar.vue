@@ -3,18 +3,24 @@
 
 <template>
     <div class="header">
-        <router-link to="/">HomePage</router-link>
-        <router-link to="/books/add">AddBookPage</router-link>
-        <router-link to="/books/:id">BookPage</router-link>          
+        <router-link to="/" class="router-link" >HomePage</router-link>|
+        <router-link to="/books/add" class="router-link" >AddBookPage</router-link>
     </div> 
 </template>
 
 <style>
+@import '../assets/styles/base.css';
+
 .header{
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+.header .router-link{
+    text-decoration: none;
+    color: var(--color-text);
 }
 
 </style>

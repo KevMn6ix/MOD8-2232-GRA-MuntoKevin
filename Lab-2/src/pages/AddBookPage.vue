@@ -41,8 +41,7 @@ export { books };
 </script>
 
 <template>
-  <BookForm buttonText="Add" :addBook=getNewBook />
-
+  <BookForm buttonText="Add" :saveBook=getNewBook />
 </template>
 
 <style>
