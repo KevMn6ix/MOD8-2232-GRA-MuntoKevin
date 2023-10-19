@@ -26,7 +26,7 @@ router.post('/auth/signup', credentialsParser, async (req, res, next) => {
 
     const username = credentials.username.trim()
     const password = await bcrypt.hash(credentials.password, 10)
-    const role = 'customer'
+    const role = 'librarian'
     const name = req.body.name.trim()
 
     await repository.createUser(username, password, role, name)
