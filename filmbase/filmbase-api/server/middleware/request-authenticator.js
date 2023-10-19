@@ -1,5 +1,5 @@
 // Request authenticator route-level middleware
-export default async (req, res, next) => {
+const requestAuthenticator = async (req, res, next) => {
   try {
     if (req.session) {
       // Authentication succeeded, because session id in request cookie matched a valid non-expired session in database,
@@ -15,3 +15,5 @@ export default async (req, res, next) => {
     next(err)
   }
 }
+
+export default requestAuthenticator;

@@ -11,6 +11,7 @@ const bookService = useBookService()
 
 const errorMessage = ref('')
 const userIsAuthenticated = authenticationService.userIsAuthenticated
+const userHasRole = authenticationService.userHasRole
 
 leaveIfUnauthorized()
 watch(userIsAuthenticated, leaveIfUnauthorized)
@@ -36,7 +37,8 @@ async function addBook(title, author, year, pageCount, description) {
 <template>
   <main>
     <div class="content">
-      <BookForm
+      <BookForm 
+        v-if="userHasRole"
         primary-button="Add"
         primary-button-class="success"
         :error-message="errorMessage"

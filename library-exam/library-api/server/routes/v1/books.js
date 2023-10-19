@@ -2,8 +2,13 @@ import express from 'express'
 import validator from '../../validators/book-validator.js'
 import repository from '../../persistence/book-repository.js'
 import createPaginator from '../../utility/paginator.js'
+import authenticator from '../../middleware/request-authenticator.js'
+import createAuthorizer from '../../middleware/request-authorizer.js'
 
 const router = express.Router()
+const authorizer = createAuthorizer(['books-write'])
+
+
 
 // GET request handler for /books endpoint (public)
 router.get('/books', async (req, res, next) => {
@@ -33,7 +38,7 @@ router.get('/books', async (req, res, next) => {
 })
 
 // POST request handler for /books endpoint (authenticated + authorized)
-router.post('/books', async (req, res, next) => {
+router.post('/books',authenticator, authorizer, async (req, res, next) => {
   try {
     const title = req.body.title
     const author = req.body.director
@@ -84,7 +89,7 @@ router.get('/books/:id', async (req, res, next) => {
 })
 
 // PUT request handler for /books/:id endpoint (authenticated + authorized)
-router.put('/books/:id', async (req, res, next) => {
+router.put('/books/:id',authenticator, authorizer, async (req, res, next) => {
   try {
     const id = Number.parseInt(req.params.id)
     const title = req.body.title
@@ -114,7 +119,7 @@ router.put('/books/:id', async (req, res, next) => {
 })
 
 // PATCH request handler for /books/:id endpoint (authenticated + authorized)
-router.patch('/books/:id', async (req, res, next) => {
+router.patch('/books/:id',authenticator, authorizer, async (req, res, next) => {
   try {
     const id = Number.parseInt(req.params.id)
     const title = req.body.title
@@ -144,7 +149,7 @@ router.patch('/books/:id', async (req, res, next) => {
 })
 
 // DELETE request handler for /books/:id endpoint (authenticated + authorized)
-router.delete('/books/:id', async (req, res, next) => {
+router.delete('/books/:id',authenticator, authorizer, async (req, res, next) => {
   try {
     const id = Number.parseInt(req.params.id)
 

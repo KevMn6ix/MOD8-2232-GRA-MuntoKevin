@@ -4,6 +4,9 @@ import { useRoute, useRouter, RouterLink } from 'vue-router'
 import LibraryLogo from './icons/LibraryLogo.vue'
 import useAuthenticationService from '../services/authentication-service.js'
 
+const userIsAuthenticated = useAuthenticationService.userIsAuthenticated
+const userHasRole = useAuthenticationService.userHasRole
+
 const home = 'home'
 const route = useRoute()
 const router = useRouter()
@@ -51,7 +54,21 @@ function collapseWhitespace(string) {
         </RouterLink>
       </div>
       <nav>
-        <ul>
+        <ul v-if="userIsAuthenticated">
+          <li>
+            <div><RouterLink :to="{ name: 'home' }">Home</RouterLink></div>
+          </li>
+          <li>
+            <div><RouterLink :to="{ name: 'about' }">About</RouterLink></div>
+          </li>
+          <li v-if="userHasRole">
+            <div><RouterLink :to="{ name: 'add' }">Add book</RouterLink></div>
+          </li>
+          <li>
+            <div><a @click="authenticationService.logOut">Log out</a></div>
+          </li>
+        </ul>
+        <ul v-else>
           <li>
             <div><RouterLink :to="{ name: 'home' }">Home</RouterLink></div>
           </li>
@@ -66,9 +83,6 @@ function collapseWhitespace(string) {
           </li>
           <li>
             <div><RouterLink :to="{ name: 'login' }">Log in</RouterLink></div>
-          </li>
-          <li>
-            <div><a @click="authenticationService.logOut">Log out</a></div>
           </li>
         </ul>
       </nav>
