@@ -1,0 +1,170 @@
+:root {
+  --palette-white: #ffffff;
+  --palette-white-soft: #f8f8f8;
+  --palette-white-mute: #f2f2f2;
+  --palette-light-grey-1: #eeeeee;
+  --palette-light-grey-2: #e8e8e8;
+  --palette-light-grey-3: #e0e0e0;
+
+  --palette-black: #181818;
+  --palette-black-soft: #282828;
+  --palette-black-mute: #333333;
+  --palette-dark-grey-1: #383838;
+  --palette-dark-grey-2: #444444;
+  --palette-dark-grey-3: #505050;
+
+  --palette-blue-1: hsl(211, 100%, 56%);
+  --palette-blue-2: #007bff;
+  --palette-blue-3: #0069d9;
+  --palette-green-1: hsl(134, 61%, 45%);
+  --palette-green-2: #28a745;
+  --palette-green-3: #218838;
+  --palette-red-1: hsl(354, 70%, 57%);
+  --palette-red-2: #dc3545;
+  --palette-red-3: #c82333;
+  --palette-yellow-1: hsl(45, 100%, 66%);
+  --palette-yellow-2: #ffc107;
+  --palette-yellow-3: #e0a800;
+
+  --palette-indigo: #2c3e50;
+
+  --palette-divider-light-1: rgba(60, 60, 60, 0.29);
+  --palette-divider-light-2: rgba(60, 60, 60, 0.12);
+  --palette-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --palette-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --palette-text-light-1: var(--palette-white);
+  --palette-text-light-2: rgba(235, 235, 235, 0.9);
+  --palette-text-light-3: rgba(235, 235, 235, 0.65);
+  --palette-text-light-4: rgba(235, 235, 235, 0.5);
+  --palette-text-dark-1: var(--palette-indigo);
+  --palette-text-dark-2: rgba(60, 60, 60, 0.9);
+  --palette-text-dark-3: rgba(60, 60, 60, 0.65);
+  --palette-text-dark-4: rgba(60, 60, 60, 0.5);
+
+  --palette-link-light: #3495f5;
+  --palette-link-visited-light: #b97cf3;
+  --palette-link-dark: #0066cc;
+  --palette-link-visited-dark: #551a8b;
+}
+
+:root {
+  --color-background: var(--palette-white);
+  --color-background-soft: var(--palette-white-soft);
+  --color-background-mute: var(--palette-white-mute);
+
+  --color-button: var(--palette-light-grey-2);
+  --color-button-hover: var(--palette-light-grey-1);
+  --color-button-active: var(--palette-light-grey-3);
+
+  --color-button-primary: var(--palette-blue-2);
+  --color-button-primary-hover: var(--palette-blue-1);
+  --color-button-primary-active: var(--palette-blue-3);
+  --color-button-primary-text: var(--palette-text-light-1);
+
+  --color-button-success: var(--palette-green-2);
+  --color-button-success-hover: var(--palette-green-1);
+  --color-button-success-active: var(--palette-green-3);
+  --color-button-success-text: var(--palette-text-light-1);
+
+  --color-button-danger: var(--palette-red-2);
+  --color-button-danger-hover: var(--palette-red-1);
+  --color-button-danger-active: var(--palette-red-3);
+  --color-button-danger-text: var(--palette-text-light-1);
+
+  --color-button-warning: var(--palette-yellow-2);
+  --color-button-warning-hover: var(--palette-yellow-1);
+  --color-button-warning-active: var(--palette-yellow-3);
+  --color-button-warning-text: var(--palette-black);
+
+  --color-border: var(--palette-divider-light-2);
+  --color-border-hover: var(--palette-divider-light-1);
+
+  --color-heading: var(--palette-text-dark-1);
+  --color-text: var(--palette-text-dark-2);
+  --color-text-soft: var(--palette-text-dark-3);
+  --color-text-mute: var(--palette-text-dark-4);
+  --color-text-success: var(--palette-green-2);
+  --color-text-danger: var(--palette-red-2);
+
+  --color-link: var(--palette-link-dark);
+  --color-link-visited: var(--palette-link-visited-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--palette-black);
+    --color-background-soft: var(--palette-black-soft);
+    --color-background-mute: var(--palette-black-mute);
+
+    --color-button: var(--palette-dark-grey-2);
+    --color-button-hover: var(--palette-dark-grey-3);
+    --color-button-active: var(--palette-dark-grey-1);
+
+    --color-border: var(--palette-divider-dark-2);
+    --color-border-hover: var(--palette-divider-dark-1);
+
+    --color-heading: var(--palette-text-light-1);
+    --color-text: var(--palette-text-light-2);
+    --color-text-soft: var(--palette-text-light-3);
+    --color-text-mute: var(--palette-text-light-4);
+
+    --color-link: var(--palette-link-light);
+    --color-link-visited: var(--palette-link-visited-light);
+  }
+}
+
+:root {
+  --max-width: 1024px;
+
+  --gap-small: 0.5rem;
+  --gap-medium: 1rem;
+  --gap-large: 1.5rem;
+
+  --margin-small: var(--gap-small);
+  --margin-medium: var(--gap-medium);
+  --margin-large: var(--gap-large);
+
+  --padding-small: var(--gap-small);
+  --padding-medium: var(--gap-medium);
+  --padding-large: var(--gap-large);
+
+  --padding-input-horizontal: 1.2rem;
+  --padding-input-vertical: 0.8rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background-soft);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

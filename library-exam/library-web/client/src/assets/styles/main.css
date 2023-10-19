@@ -1,0 +1,298 @@
+@import './base.css';
+
+a {
+  color: var(--color-link);
+  cursor: pointer;
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+:link {
+  color: var(--color-link);
+}
+
+:visited {
+  color: var(--color-link-visited);
+}
+
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+nav ul,
+nav ol {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+p:not(:first-child):not(.subtitle) {
+  margin-top: var(--margin-medium);
+}
+
+p:not(:last-of-type):not(.subtitle) {
+  margin-bottom: var(--margin-medium);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--color-text-soft);
+}
+
+.success {
+  color: var(--color-text-success);
+}
+
+.danger {
+  color: var(--color-text-danger);
+}
+
+a.button {
+  display: inline-block;
+}
+
+form a.button,
+form button,
+form fieldset,
+form input,
+form select,
+form textarea {
+  width: 100%;
+}
+
+a.button,
+button,
+fieldset,
+input,
+select,
+textarea {
+  padding: var(--padding-input-vertical) var(--padding-input-horizontal);
+  border-radius: 0.25rem;
+  font-size: 1em;
+  transition:
+    color 0.1s,
+    background-color 0.1s;
+}
+
+fieldset,
+input,
+textarea {
+  color: var(--color-text);
+  background: var(--color-background-mute);
+  border: 1px solid var(--color-border);
+}
+
+a.button,
+button,
+input[type='button'],
+input[type='color'],
+input[type='file'],
+input[type='reset'],
+input[type='submit'],
+select {
+  color: var(--color-text);
+  background: var(--color-button);
+  border: 1px solid var(--color-border);
+}
+
+@media (hover: hover) {
+  a.button:hover,
+  button:hover,
+  input[type='button']:hover,
+  input[type='color']:hover,
+  input[type='file']:hover,
+  input[type='reset']:hover,
+  input[type='submit']:hover,
+  select:hover {
+    color: var(--color-heading);
+    background: var(--color-button-hover);
+    border: 1px solid var(--color-border-hover);
+  }
+}
+
+a.button:active,
+button:active,
+input[type='button']:active,
+input[type='color']:active,
+input[type='file']:active,
+input[type='reset']:active,
+input[type='submit']:active,
+select:active {
+  color: var(--color-heading);
+  background: var(--color-button-active);
+  border: 1px solid var(--color-border-hover);
+}
+
+a.button.primary,
+button.primary,
+input[type='button'].primary,
+input[type='reset'].primary,
+input[type='submit'].primary {
+  color: var(--color-button-primary-text);
+  background: var(--color-button-primary);
+}
+
+@media (hover: hover) {
+  a.button.primary:hover,
+  button.primary:hover,
+  input[type='button'].primary:hover,
+  input[type='reset'].primary:hover,
+  input[type='submit'].primary:hover {
+    background: var(--color-button-primary-hover);
+  }
+}
+
+a.button.primary:active,
+button.primary:active,
+input[type='button'].primary:active,
+input[type='reset'].primary:active,
+input[type='submit'].primary:active {
+  background: var(--color-button-primary-active);
+}
+
+a.button.success,
+button.success,
+input[type='button'].success,
+input[type='reset'].success,
+input[type='submit'].success {
+  color: var(--color-button-success-text);
+  background: var(--color-button-success);
+}
+
+@media (hover: hover) {
+  a.button.success:hover,
+  button.success:hover,
+  input[type='button'].success:hover,
+  input[type='reset'].success:hover,
+  input[type='submit'].success:hover {
+    background: var(--color-button-success-hover);
+  }
+}
+
+a.button.success:active,
+button.success:active,
+input[type='button'].success:active,
+input[type='reset'].success:active,
+input[type='submit'].success:active {
+  background: var(--color-button-success-active);
+}
+
+a.button.danger,
+button.danger,
+input[type='button'].danger,
+input[type='reset'].danger,
+input[type='submit'].danger {
+  color: var(--color-button-danger-text);
+  background: var(--color-button-danger);
+}
+
+@media (hover: hover) {
+  a.button.danger:hover,
+  button.danger:hover,
+  input[type='button'].danger:hover,
+  input[type='reset'].danger:hover,
+  input[type='submit'].danger:hover {
+    background: var(--color-button-danger-hover);
+  }
+}
+
+a.button.danger:active,
+button.danger:active,
+input[type='button'].danger:active,
+input[type='reset'].danger:active,
+input[type='submit'].danger:active {
+  background: var(--color-button-danger-active);
+}
+
+a.button.warning,
+button.warning,
+input[type='button'].warning,
+input[type='reset'].warning,
+input[type='submit'].warning {
+  color: var(--color-button-warning-text);
+  background: var(--color-button-warning);
+}
+
+@media (hover: hover) {
+  a.button.warning:hover,
+  button.warning:hover,
+  input[type='button'].warning:hover,
+  input[type='reset'].warning:hover,
+  input[type='submit'].warning:hover {
+    background: var(--color-button-warning-hover);
+  }
+}
+
+a.button.warning:active,
+button.warning:active,
+input[type='button'].warning:active,
+input[type='reset'].warning:active,
+input[type='submit'].warning:active {
+  background: var(--color-button-warning-active);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  width: inherit;
+  margin-inline-end: var(--margin-small);
+}
+
+input[type='color'] {
+  padding: var(--padding-small);
+  height: 3rem;
+}
+
+input[type='range'] {
+  padding: 0 var(--padding-input-horizontal);
+}
+
+input[type='date'],
+input[type='datetime-local'],
+input[type='time'],
+textarea {
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 6em;
+  height: 6em;
+}
+
+form > *:not(:last-child),
+fieldset > *:not(:last-child):not(legend) {
+  margin-bottom: var(--margin-medium);
+}
+
+fieldset {
+  padding: var(--padding-input-vertical) var(--padding-input-horizontal) calc(var(--padding-input-vertical) + 0.4rem)
+    var(--padding-input-horizontal);
+  background: inherit;
+}
+
+#app {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100dvh;
+}
