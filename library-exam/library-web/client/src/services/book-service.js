@@ -21,7 +21,18 @@ const findBooks = async (query) => {
 
 const createBook = async (title, author, year, pageCount, description) => {
   // TODO
-  return { error: { message: 'Create book function in book service not implemented.' } }
+  try {
+    const error = validator.validateBook(title, author, year, pageCount, description)
+    if (error) {
+      return { error }
+    }
+    const response = await axios.post('/books', { title, author, year, pageCount, description })
+    return response.data
+
+  } catch (error) {
+    return handleError(error)
+  }
+  
 }
 
 const updateBook = async (id, title, author, year, pageCount, description) => {
