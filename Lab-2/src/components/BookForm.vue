@@ -25,7 +25,7 @@ export default{
     <div class="form">
         <form>
             <label id="bookName">Book Name</label>
-            <input type='text' v-model="bookData.bookName" placeholder="Book Name" />
+            <input type='text' v-model="bookData.bookName" placeholder="Book Name" class="input"/>
 
             <label id="bookAuthor">Author name</label>
             <input type='text' v-model="bookData.bookAuthor" placeholder="Author Name" />
@@ -58,7 +58,6 @@ form input, form textarea{
     font-size: 1.2rem;
     background-color: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.1);
-    color: #f4f 4f4;
 }
 
 .btn{
